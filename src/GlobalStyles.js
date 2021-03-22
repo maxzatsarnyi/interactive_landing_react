@@ -68,6 +68,29 @@ const GlobalStyle = createGlobalStyle`
 }
 
 /* END FAQ transition */
+
+/* STARS RATINGS */
+.dv-star-rating-star{
+  background: var(--primary-color);
+  margin: 3px;
+  height: 22px;
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+/* END STARS RATINGS */
+
+/* ICONS HOVER */
+
+/* .social-icon{
+  cursor: pointer;
+  transition: 0.3 ease-in-out;
+
+} */
+
+
   h1{
     font-size: 42px;
     font-weight: 700;

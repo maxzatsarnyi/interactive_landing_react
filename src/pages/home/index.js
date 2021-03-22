@@ -7,6 +7,8 @@ import Earpods from '../../components/sections/Earpods/index';
 import Notebook from '../../components/sections/Notebook';
 import Works from '../../components/sections/Works/index';
 import Pin from '../../components/sections/Pin/index';
+import Faq from '../../components/sections/Faq/index';
+import Footer from '../../components/Footer/index';
 
 const Home = () => {
     return (
@@ -17,8 +19,10 @@ const Home = () => {
             {/* <Calculator /> */}
             {/* <Earpods /> */}
             {/* <Notebook /> */}
-            <Works />
-            <Pin />
+            {/* <Works /> */}
+            {/* <Pin /> */}
+            {/* <Faq /> */}
+            <Footer />
         </>
     )
 }
