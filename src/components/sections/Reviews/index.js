@@ -20,7 +20,7 @@ import {
 import Pagination from '../../shared/Pagination/index'
 import data from './Data';
 import "react-alice-carousel/lib/alice-carousel.css";
-import AliceCarousel from 'react-alice-carousel';
+
 const responsive = {
     0: {
       items: 1
@@ -64,7 +64,7 @@ const Reviews = () => {
                     <ReviewsH2>Reviews</ReviewsH2>
                     <ReviewsP>Nam libero tempore, cum soluta nobis est </ReviewsP>
 
-                    <ReviewsList isMore={currentReviews && currentReviews.length > 3 || page > 1? true : false}>
+                    <ReviewsList isMore={currentReviews && currentReviews.length > 3}>
                         {currentReviews && currentReviews.map(({id, id_user, text}) => (
                                 <ReviewItem key={id}>
                                     <ReviewItemWrap>

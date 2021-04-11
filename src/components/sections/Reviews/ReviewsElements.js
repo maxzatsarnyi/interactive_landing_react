@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ReviewsSection = styled.div`
-    min-height: 843px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,13 +8,34 @@ export const ReviewsSection = styled.div`
 
 export const ReviewsContainer = styled.div`
     width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-`;
+    width: 1187.08px;
 
+    margin: 130px auto 0 auto;
+
+    
+    @media screen and (max-width: 1400px){
+        max-width: 90%;
+    }
+    
+    @media screen and (max-width: 1200px){
+        overflow: hidden;
+    }
+
+    @media screen and (max-width: 992px){
+    }
+    @media screen and (max-width: 768px){
+        margin-top: 78px;
+        max-width: 90%; 
+    }
+    @media screen and (max-width: 480px){
+        margin-top: 45px;
+        max-width: 94%;
+    }
+    
+`;
 
 export const ReviewsH2 = styled.h2`
     font-family: 'Epilogue', sans-serif;
@@ -23,6 +43,12 @@ export const ReviewsH2 = styled.h2`
     font-size: 32px;
     line-height: 38px;
     color: var(--text-first-color);
+
+    @media screen and (max-width: 480px){
+        width: 100%;
+        font-size: 22px;
+        text-align: left;
+    }
 `;
 
 export const ReviewsP = styled.p`
@@ -32,64 +58,63 @@ export const ReviewsP = styled.p`
     line-height: 27px;
     text-align: center;
     color: #63718E;
+
+    @media screen and (max-width: 480px){
+        width: 100%;
+        text-align: left;
+        font-size: 16px;
+    }
 `;
 
 export const ReviewsList = styled.ul`
-
-    width: 100%;
     height: 100%;
-    list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    overflow: hidden;
+    list-style: none;
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 1200px){
         flex-wrap: ${({isMore}) => (isMore ? 'wrap' : 'nowrap')};
-        justify-content: center;
     }
-
     @media screen and (max-width: 480px){
+        margin-top: 40px;
+        flex-direction: column;
     }
 `;
 
 export const ReviewItem = styled.li`
-    margin-top: 25px;
+    height: 500px;
+    width: 380px;
+    display: flex;
+    align-items: center;
+    margin: 25px 3px 0 3px;
 
     background: #FFFFFF;
     box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
     border-radius: 8px;
-    width: 380px;
-    height: 500px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     :hover{
         transform: scale(1.03);
     }
-
     @media screen and (max-width: 768px){
-        flex-wrap: nowrap;
-        justify-content: center;
         margin: 25px 10px 0 10px;
     }
-
-    
+    @media screen and (max-width: 480px){
+        width: 300px;
+    }
 `;
-export const ReviewItemWrap = styled.div`
-    width: 320px;
-    height: 100%;
-    margin: 0 auto;
 
+export const ReviewItemWrap = styled.div`
+    height: 436px;
+    width: 84%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* align-items: center; */
+    align-items: space-between;
 `;
 
-
 export const ItemTitleWrap = styled.div`
-    margin-top: 30px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -109,23 +134,22 @@ export const ItemStarsWrap = styled.div`
 
 export const ItemText = styled.div`
     margin-top: 35px;
-
-    width: 298px;
+    width: 95%;
     font-style: italic;
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;
     color: #63718E;
-    /* padding: 46px 52px 122px 30px; */
+
+    @media screen and (max-width: 480px){
+        font-size: 16px;
+    }
 `;
 
 export const ItemUserWrap = styled.div`
-    /* margin-top: 122px; */
     display: flex;
     flex-direction: column; 
     justify-content: flex-end;
-    padding-bottom: 30px;
-
     position: relative;
     bottom: 0;
     height: 100%;
@@ -133,7 +157,6 @@ export const ItemUserWrap = styled.div`
 
 export const ItemUser = styled.div`
     display: flex;
-    
 `;
 
 export const ItemUserId = styled.div`
@@ -150,7 +173,6 @@ export const ItemUserCateg = styled.div`
     color: #63718E;
 `;
 
-
 export const ReviewsBtnMore = styled.button`
     margin-top: 40px;
     font-family: "Epilogue", sans-serif;
@@ -165,6 +187,5 @@ export const ReviewsBtnMore = styled.button`
     border-bottom: 2px dotted #C774EE;
     padding-bottom: 8px;
     transition: 0.3s ease-in-out;
-    
 `;
 
