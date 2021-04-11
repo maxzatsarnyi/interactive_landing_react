@@ -17,8 +17,8 @@ import {
 } from './ModalElements';
 
 const Modal = ({showModal, toggleModal}) => {
-    const [email, setEmail] = useState();
-    const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [name, setName] = useState();
   const modalRef = useRef();
 
   const animation = useSpring({
@@ -47,6 +47,8 @@ const Modal = ({showModal, toggleModal}) => {
     const handleSubmit = e => {
         e.preventDefault();
         console.log({email,name});
+
+        toggleModal();
     }
 
   useEffect(
