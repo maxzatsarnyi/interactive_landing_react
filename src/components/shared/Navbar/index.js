@@ -13,9 +13,11 @@ import {
     NavBtnsWrap,
     NavBtnDown,
     NavBtnSign,
+    BurgerWrap,
+    BurgerIcon,
 } from './NavbarElements';
 
-const Navbar = ({toggle}) => {
+const Navbar = ({toggleBurger, toggleModal}) => {
     return (
         <>
             <Nav>
@@ -24,12 +26,18 @@ const Navbar = ({toggle}) => {
                         <Logo src={require('../../../images/logo.svg').default}/>
                     </LogoWrapper>
                     
+                    <BurgerWrap onClick={toggleBurger} >
+                            <BurgerIcon src={require('../../../images/burger.svg').default} />
+                    </BurgerWrap>
+
                     <WrapperContent>
 
                         <IconsWrapper>
                             <Icon src={require('../../../images/search.svg').default} />
-                            <Icon src={require('../../../images/phone-number.svg').default} />
+                            <Icon onClick={toggleModal} src={require('../../../images/phone-number.svg').default} />
                         </IconsWrapper>
+
+                        
 
                         <Menu>
                             <MenuItem><MenuLinks to="#">About</MenuLinks></MenuItem>

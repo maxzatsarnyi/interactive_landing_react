@@ -8,24 +8,32 @@ export const Nav = styled.nav`
     justify-content: center;
     position: sticky;
     top: 0;
+
+    z-index: 1005;
 `;
 
 export const NavContainer = styled.div`
     width: 100%;
-    max-width: 1180px;
+    max-width: 62%;
     height: 88px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* justify-content: center; */
+
+    @media screen and (max-width: 1400px){
+        //same max-width fits for 1200 and 768
+        max-width: 90%; 
+    }
+    
+    @media screen and (max-width: 320px){
+        max-width: 94%;
+    }
 `;
 
 export const LogoWrapper = styled(Link)`
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
-    /* margin-right: auto; */
 `;
 
 
@@ -38,15 +46,36 @@ export const WrapperContent = styled.div`
     align-items: center;
     width: 100%;
     /* max-width: 670px; */
-    max-width: 750px;
+    /* max-width: 750px; */
+    max-width: 64%;
 
-    justify-content: space-between;
+    justify-content: flex-end;
+
+
+    @media screen and (max-width: 992px){
+        display: none;
+    }
+
+    /* @media screen and (max-width: 768px){
+    } */
 `;
 
 export const IconsWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+`;
+export const BurgerWrap = styled.div`
+    display: none; 
+    z-index: 999;
+    @media screen and (max-width: 992px){
+        display: block;
+    }
+`;
+
+export const BurgerIcon = styled.img`
+    display: flex;
+    align-items: center;
 `;
 
 export const Icon = styled.img`
@@ -63,11 +92,12 @@ export const Menu = styled.ul`
     list-style: none;
     display: flex;
     align-items: center;
+
 `;
 
 export const MenuItem = styled.li`
     cursor: pointer;
-    padding: 0 15px;
+    padding: 0 8px;
 
 `;
 
@@ -98,7 +128,7 @@ export const NavBtnDown = styled.button`
     font-size: 15px;
     color: #ffffff;
     cursor: pointer;
-    margin-left: 15px;
+    margin-left: 20px;
     transition: 0.3s ease-in-out;
 
     &:hover{
