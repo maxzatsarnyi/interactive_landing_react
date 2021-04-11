@@ -13,6 +13,8 @@ import {
     CalculatorResults,
     ResultsBtn,
     ResultsWrap,
+    SelectorWrapper,
+    SelectorWrapper2,
 } from './CalculatorElements';
 import styled from 'styled-components';
 
@@ -130,12 +132,20 @@ const CalculatorSection = () => {
                     <CalculatorP>Nam libero tempore, cum soluta nobis est eligendi optio</CalculatorP>
                     <CalculatorWrapper>
                         <CalculatorSelectors>
-                            <Select handleChange={changeColor} width={180} placeholder={'Colors'} options={colorsOptions}/>
-                            <Select handleChange={changeSize} width={180} placeholder={'Size'} options={sizeOptions}/>
-                            <NumSelect selectedScore={selectedScore} score={score} minus={minus} plus={plus}/> 
-                            <CalendarSelector startDate={startDate} setStartDate={setStartDate}/>
-                            <Select handleChange={changeCity} width={380} placeholder={'City'} options={cityOptions}/>
-                            <Select handleChange={changeDelivery} width={380} placeholder={'Delivery'} options={deliveryOptions}/>
+                            <SelectorWrapper>
+                                <Select handleChange={changeColor} width={'100%'} placeholder={'Colors'} options={colorsOptions}/>
+                                <Select handleChange={changeSize} width={'100%'} placeholder={'Size'} options={sizeOptions}/>
+                            </SelectorWrapper>
+                            <SelectorWrapper>
+                                <NumSelect selectedScore={selectedScore} score={score} minus={minus} plus={plus}/> 
+                                <CalendarSelector startDate={startDate} setStartDate={setStartDate}/>
+                            </SelectorWrapper>
+                           
+                            <SelectorWrapper2>
+                                <Select handleChange={changeCity} width={'100%'} placeholder={'City'} options={cityOptions}/>
+                                <Select handleChange={changeDelivery} width={'100%'} placeholder={'Delivery'} options={deliveryOptions}/>
+                            </SelectorWrapper2>
+                           
                         </CalculatorSelectors>
                         <CalculatorResults>
                             <ResultsWrap>
