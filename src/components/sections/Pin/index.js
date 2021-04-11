@@ -30,7 +30,6 @@ const Pin = () => {
     useEffect(() => {
     }, [currentSlide])
 
-    console.log(currentObj.text1)
     return (
         <>
             <PinContainer>
@@ -50,13 +49,13 @@ const Pin = () => {
                     <PinSliderWrap>
                         <PinMenu>
                             <PinItem data-slide={1} onClick={changeSlide}>
-                                <ItemText isActive={currentSlide == 1 && true}>Nemo enim</ItemText>
+                                <ItemText isActive={currentSlide == 1 && true}>Temporibus autem</ItemText>
                             </PinItem>
                             <PinItem data-slide={2} onClick={changeSlide}>
-                                <ItemText isActive={currentSlide == 2 && true}>Die ipsam voluptatem</ItemText>
+                                <ItemText isActive={currentSlide == 2 && true}>Nam libero</ItemText>
                             </PinItem>
                             <PinItem data-slide={3} onClick={changeSlide}>
-                                <ItemText isActive={currentSlide == 3 && true}>Ut enim ad minima</ItemText>
+                                <ItemText isActive={currentSlide == 3 && true}>Et harum</ItemText>
                             </PinItem>
                         </PinMenu>
 
