@@ -1,73 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
 
-
-  const customStyles = {
-    container: (provided) => ({
-      ...provided,
-      display: 'flex',
-      width: 240,
-      
-    }),
-
-    menu: (provided) => ({
-      ...provided,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: 240,
-      paddingTop: 6,
-      paddingBottom: 6,
-      filter: 'drop-shadow(4px 6px 10px rgba(0, 0, 0, 0))',
-      background: '#F9FAFC',
-      border: 'none',
-      borderRadius: 0,
-    }),
-    
-    option: (provided, state) => ({
-      ...provided,
-      display: 'flex',
-      alignItems: 'center',
-      color: state.isSelected ? 'var(--primary-color)' : '#111111',
-      padding: 10,
-      background: state.isSelected && '#FEE5FF',
-      cursor: 'pointer',
-      width: 208,
-      height: 40,
-      borderRadius: 6,
-    }),
-    indicatorSeparator: () => ({
-      display: 'none'
-    }),
-    dropdownIndicator: (provided,state) => ({
-      ...provided,
-      transition: 'all 0.2s ease',
-      transform: state.isFocused ? 'rotate(180deg)' : null,
-    }),
-    control: (provided,state) => ({
-      ...provided,
-      border: state.isFocused && '1px solid #C774EE',
-      outline: 'none',
-      paddingLeft: 10,
-      indicatorSeparator: false,
-      display: 'flex',
-      autoComplete: 'off', autoCorrect: 'off', spellCheck: 'off',
-      width: 240,
-      height: 50,
-      background: '#F9FAFC',
-      boxShadow: state.isSelected ? '4px 6px 10px rgba(0, 0, 0, 0.05)' : '0px 1px 3px rgba(5, 41, 83, 0.14)',
-      borderRadius: 10,
-      cursor: 'pointer',
-      marginBottom: 20,
-    }),
-    
-    singleValue: (provided, state) => {
-      const opacity = state.isDisabled ? 0.5 : 1;
-      const transition = 'opacity 300ms';
-      return { ...provided, opacity, transition };
-    }
-  }
-
 const Selector = ({placeholder, options, handleChange=null, width=200, height}) => (
         <Select
           styles={{
@@ -75,10 +8,14 @@ const Selector = ({placeholder, options, handleChange=null, width=200, height}) 
               ...provided,
               width: width,
               display: 'flex',
+              // margin: '10px',
+              marginTop: '20px',
+              // justifyContent: 'center',
+              // marginLeft: '20px',
             }),
             menu: (provided) => ({
               ...provided,
-              width: width,
+              width: '100%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -104,7 +41,7 @@ const Selector = ({placeholder, options, handleChange=null, width=200, height}) 
               padding: 10,
               background: state.isSelected && '#FEE5FF',
               cursor: 'pointer',
-              width: 208,
+              width: '100%',
               height: 40,
               borderRadius: 6,
             }),
@@ -116,9 +53,13 @@ const Selector = ({placeholder, options, handleChange=null, width=200, height}) 
               transition: 'all 0.2s ease',
               transform: state.isFocused ? 'rotate(180deg)' : null,
             }),
+            menuList: (provided,state) => ({
+              ...provided,
+              width: '87%',
+            }),
             control: (provided,state) => ({
               ...provided,
-              width: width,
+              width: '100%',
               border: state.isFocused && '1px solid #C774EE',
               outline: 'none',
               paddingLeft: 10,
@@ -130,15 +71,15 @@ const Selector = ({placeholder, options, handleChange=null, width=200, height}) 
               boxShadow: state.isSelected ? '4px 6px 10px rgba(0, 0, 0, 0.05)' : '0px 1px 3px rgba(5, 41, 83, 0.14)',
               borderRadius: 10,
               cursor: 'pointer',
-              marginBottom: 20,
+              // marginBottom: 20,
               // marginLeft: 25,
-
               borderStyle: 'none',
             }),
             
             singleValue: (provided, state) => {
               const opacity = state.isDisabled ? 0.5 : 1;
               const transition = 'opacity 300ms';
+              
               return { ...provided, opacity, transition };
             }
           }}
