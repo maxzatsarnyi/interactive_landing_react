@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
  
 const GlobalStyle = createGlobalStyle`
   * {
-    /* border: 0.1px solid green; */
     
     box-sizing: border-box;
     margin: 0;
@@ -23,9 +22,38 @@ const GlobalStyle = createGlobalStyle`
 
   }
   
+  /* REACT-SELECTOR */
+  .css-1x2rgom-container{
+    margin-left: 20px;
+
+    
+    @media screen and (max-width: 768px){
+        :first-child{
+          margin-left: 0px;
+        }
+
+    }
+    @media screen and (max-width: 480px){
+        margin-left: 0px;
+    }
+  }
+
+  /* REACT-SELECTOR END*/
+
   // CALENDAR
+
+  .react-datepicker-wrapper{
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 20px;
+
+    @media screen and (max-width: 480px){
+        margin-left: 0px;
+    }
+  }
+
   .react-datepicker__input-container input{
-    width: 180px;
+    width: 100%;
     height: 50px;
     background: #F9FAFC;
     box-shadow: 0px 1px 3px rgba(5, 41, 83, 0.14);
@@ -82,17 +110,22 @@ const GlobalStyle = createGlobalStyle`
 }
 /* END STARS RATINGS */
 
-/* ICONS HOVER */
+.alice-carousel__wrapper{
+  background-color: white;
+  padding: 30px;
 
-/* .social-icon{
-  cursor: pointer;
-  transition: 0.3 ease-in-out;
+}
+.alice-carousel__stage{
+  /* background-color: yellow; */
+}
 
-} */
-
+.alice-carousel__dots{
+  margin-top: 70px;
+}
 
   h1{
     font-size: 42px;
+
     font-weight: 700;
   }
 
