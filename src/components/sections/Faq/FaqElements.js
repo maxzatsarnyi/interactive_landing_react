@@ -1,19 +1,44 @@
 import styled from 'styled-components';
 
 export const FaqContainer = styled.div`
-    height: 925px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin-top: 100px;
+   
+    @media screen and (max-width: 992px){
+        margin-top: 100px;
+    }
+    @media screen and (max-width: 768px){
+        margin-top: 0px;
+    }
+
 `;
 
 export const FaqWrapper = styled.div`
     width: 100%;
-    max-width: 1044px;
+    max-width: 54.38%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 1400px){
+        max-width: 90%;
+    }
+    
+    @media screen and (max-width: 992px){
+        flex-direction: column;
+    }
+    @media screen and (max-width: 768px){
+        margin-top: 78px;
+        max-width: 90%; 
+    }
+    @media screen and (max-width: 480px){
+        margin-top: 68px;
+        max-width: 94%;
+    }
 `;
 
 export const FaqTitleH2 = styled.h2`
@@ -23,13 +48,15 @@ export const FaqTitleH2 = styled.h2`
     font-size: 32px;
     line-height: 38px;
     color: var(--text-first-color);
+
+    @media screen and (max-width: 768px){
+        text-align: center;
+    }
 `;
 
 export const FaqList = styled.ul`
     margin-top: 10px;
     list-style: none; 
-
-    max-width: 1044px;
     width: 100%;
 `;
 
@@ -57,8 +84,11 @@ export const ItemTitleWrap = styled.div`
 export const ItemTitle = styled.h4`
     font-weight: bold;
     font-size: 22px;
-    line-height: 30px;
     color: var(--text-first-color);
+    line-height: 1.4rem;
+    @media screen and (max-width: 768px){
+        max-width: 90%; 
+    }
 `;
 
 export const ItemArrow = styled.img`
@@ -76,11 +106,14 @@ export const ItemText = styled.p`
     margin: 14px 0px;
     color: var(--text-third-color);
     transition: 0.4s ease-in-out;
+    width: 98%;
 `;
 
 export const FaqButton = styled.button`
     margin-top: 36px;
     display: flex;
+    cursor: pointer;
+
     justify-content: center;
     align-items: center;
     /* padding: 18px 22px; */
@@ -99,5 +132,9 @@ export const FaqButton = styled.button`
 
     :hover{
         box-shadow: 0px 5px 10px rgba(76, 174, 80, 0.3);
+    }
+
+    @media screen and (max-width: 768px){
+        margin-top: 20px;
     }
 `;

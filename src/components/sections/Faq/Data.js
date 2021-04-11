@@ -9,7 +9,7 @@ export default [
         id: 2,
         title: 'Nemo enim ipsam voluertrhs?',
         text: 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.',
-        isVisible: false,
+        isVisible: true,
     },
     {
         id: 3,

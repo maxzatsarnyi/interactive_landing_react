@@ -42,10 +42,10 @@ const Faq = () => {
                         {dataArr.length > 0 && (
                             dataArr.map(({id, title, text, isVisible}) => (
                                 <>
-                                    <FaqItem key={id}>
+                                    <FaqItem key={id.toString()} id={id.toString()}>
                                         <ItemTitleWrap>
                                             <ItemTitle>{title}</ItemTitle>
-                                            <ItemArrow data-id={id} isVisible={isVisible} onClick={changeVisible} src={require('../../../images/arrow-faq.svg').default}/>
+                                            <ItemArrow data-id={id.toString()} isVisible={isVisible} onClick={changeVisible} src={require('../../../images/arrow-faq.svg').default}/>
                                         </ItemTitleWrap>
                                         <CSSTransition
                                             in={isVisible}
