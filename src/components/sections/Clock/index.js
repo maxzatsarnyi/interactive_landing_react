@@ -10,6 +10,13 @@ import {
     ClockImgWrap,
     ClockImgBg,
     ClockImg,
+
+    NoticeImgWrap,
+    NoticeImgBg,
+    NoticeCard,
+    CardIcon,
+    CardIconWrap,
+    CardText,
 } from './ClockElements';
 
 const Clock = () => {
@@ -21,7 +28,14 @@ const Clock = () => {
                     <ClockImgWrap>
                         <ClockImgBg src={require('../../../images/bg-watch.svg').default}/>
                         <ClockImg src={require('../../../images/watch.svg').default}/>
-
+                        <NoticeImgWrap>
+                            <NoticeCard>
+                                <CardIconWrap>
+                                    <CardIcon src={require('../../../images/notice-icon.svg').default}/>
+                                </CardIconWrap>
+                                <CardText>Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est.</CardText>
+                            </NoticeCard>
+                        </NoticeImgWrap>
                     </ClockImgWrap>
 
                     <ClockContent>
